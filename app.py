@@ -13,9 +13,14 @@ while True:
             print('Você não digitou nome do item!')
     elif comando.lower() == 'r':
         indice = input('Qual indice do Item que deseja Remover: ')
-        if int(indice) < len(lista):
-            lista.pop(int(indice))
-            print('Item removido com Sucesso.')
+        try:
+            if int(indice) < len(lista):
+                lista.pop(int(indice))
+                print('Item removido com Sucesso.')
+            else:
+                print('indice inexistente.')
+        except:
+            print('Digite o indice corretamente.')
     elif comando.lower() == 'l':
         if len(lista) > 0:
             for i, item in enumerate(lista):
