@@ -18,7 +18,8 @@ while True:
             print('Item removido com Sucesso.')
     elif comando.lower() == 'l':
         if len(lista) > 0:
-            print(list(enumerate(lista)))
+            for i, item in enumerate(lista):
+                print(i,item)
         else:
             print('Nenhum item encontrado!')
     else:
